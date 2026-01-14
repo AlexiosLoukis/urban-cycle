@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="el">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UrbanCycle — E-Bike Rentals & City Tours</title>
+  <meta name="description" content="Ενοικίαση e-bike και city tours. Mobile-first responsive ιστοσελίδα.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!-- Fixed/Dynamic header + σωστή πλοήγηση σε sections -->
+  <header class="site-header" id="top">
+    <div class="header-inner">
+      <a class="brand" href="#top" aria-label="UrbanCycle αρχή">
+        <span class="brand-mark">UC</span>
+        <span class="brand-name">UrbanCycle</span>
+      </a>
+
+      <!-- Mobile menu button (JS event click) -->
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mainNav">
+        ☰ Μενού
+      </button>
+
+      <nav class="main-nav" id="mainNav">
+        <a href="#about">Σχετικά</a>
+        <a href="#services">Υπηρεσίες</a>
+        <a href="#tours">Tours</a>
+        <a href="#media">Παρουσίαση</a>
+        <a href="#contact">Επικοινωνία</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO section (υποχρεωτικό) -->
+    <section class="hero" aria-label="Hero">
+      <div class="hero-inner">
+        <h1>Ανακάλυψε την πόλη με e-bike.</h1>
+        <p>
+          Ενοικίαση ηλεκτρικών ποδηλάτων και οργανωμένα city tours με οδηγό.
+          Σχεδιασμένο για κινητό: γρήγορο, καθαρό και responsive.
+        </p>
+
+        <div class="hero-actions">
+          <a class="cta" href="#contact">Κράτηση / Ραντεβού</a>
+          <a class="cta cta-ghost" href="#services">Δες πακέτα</a>
+        </div>
+
+        <!-- Responsive images (srcset + sizes) -->
+        <figure class="hero-figure">
+          <img
+            src="images/hero-1024.jpg"
+            srcset="images/hero-640.jpg 640w, images/hero-1024.jpg 1024w, images/hero-1440.jpg 1440w"
+            sizes="(max-width: 700px) 100vw, (max-width: 1100px) 70vw, 900px"
+            alt="E-bike σε αστικό τοπίο"
+            loading="lazy">
+          <figcaption>Άνεση, ασφάλεια, βόλτα χωρίς άγχος.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section">
+      <h2>Σχετικά με εμάς</h2>
+      <p>
+        Η <strong>UrbanCycle</strong> προσφέρει e-bikes τελευταίας γενιάς,
+        κράνη και βασικό εξοπλισμό ασφαλείας. Στόχος μας είναι μια φιλική
+        εμπειρία μετακίνησης για κατοίκους και επισκέπτες.
+      </p>
+
+      <div class="highlights">
+        <div class="pill">✔️ Κράνη &amp; κλειδαριές</div>
+        <div class="pill">✔️ Χάρτης διαδρομών</div>
+        <div class="pill">✔️ Υποστήριξη επί τόπου</div>
+      </div>
+    </section>
+
+    <!-- Services (cards + container query) -->
+    <section id="services" class="section">
+      <h2>Υπηρεσίες</h2>
+
+      <div class="cards" data-cards>
+        <article class="card">
+          <h3>Ενοικίαση 2 ωρών</h3>
+          <p>Ιδανικό για μια γρήγορη βόλτα. Περιλαμβάνει εξοπλισμό ασφαλείας.</p>
+          <p class="price">€18</p>
+        </article>
+
+        <article class="card">
+          <h3>Ημερήσιο πάσο</h3>
+          <p>Για εξερεύνηση χωρίς περιορισμούς. Bonus: προτεινόμενη διαδρομή.</p>
+          <p class="price">€35</p>
+        </article>
+
+        <article class="card">
+          <h3>Συνδρομή μήνα</h3>
+          <p>Για κατοίκους: 8 ενοικιάσεις/μήνα με προτεραιότητα διαθεσιμότητας.</p>
+          <p class="price">€89</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Tours (cards + image) -->
+    <section id="tours" class="section">
+      <h2>City Tours</h2>
+      <p>Μικρές ομάδες, στάσεις για φωτογραφίες και σημεία ενδιαφέροντος.</p>
+
+      <div class="tour-grid">
+        <article class="tour">
+          <img
+            src="images/tour-800.jpg"
+            srcset="images/tour-400.jpg 400w, images/tour-800.jpg 800w"
+            sizes="(max-width: 700px) 100vw, 420px"
+            alt="Ομάδα σε city tour με ποδήλατα"
+            loading="lazy">
+          <div class="tour-body">
+            <h3>Ιστορικό κέντρο (90')</h3>
+            <p>Διαδρομή χαμηλής δυσκολίας, ιδανική για πρώτη φορά.</p>
+            <p class="price">€22 / άτομο</p>
+          </div>
+        </article>
+
+        <article class="tour">
+          <img
+            src="images/service-800.jpg"
+            srcset="images/service-400.jpg 400w, images/service-800.jpg 800w"
+            sizes="(max-width: 700px) 100vw, 420px"
+            alt="E-bike κοντά σε παραλιακή διαδρομή"
+            loading="lazy">
+          <div class="tour-body">
+            <h3>Παραλιακή διαδρομή (120')</h3>
+            <p>Πιο “open” διαδρομή με στάσεις για θέα και ξεκούραση.</p>
+            <p class="price">€28 / άτομο</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Media (iframe) -->
+    <section id="media" class="section">
+      <h2>Παρουσίαση</h2>
+      <p>Σύντομο video παρουσίασης της εμπειρίας UrbanCycle.</p>
+
+      <div class="media-wrap">
+        <!-- iframe όπως στο Lab03 (polymesa) -->
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+          title="UrbanCycle παρουσίαση"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </section>
+
+    <!-- Contact (φόρμα + JS validation + status) -->
+    <section id="contact" class="section">
+      <h2>Επικοινωνία</h2>
+
+      <form id="contact-form" class="contact-form" action="#" method="post">
+        <p>
+          <label for="name">Όνομα *</label>
+          <input type="text" id="name" name="name" required>
+        </p>
+
+        <p>
+          <label for="email">Email *</label>
+          <input type="email" id="email" name="email" required>
+        </p>
+
+        <p>
+          <label for="topic">Θέμα</label>
+          <select id="topic" name="topic">
+            <option>Κράτηση</option>
+            <option>Ερώτηση</option>
+            <option>Υποστήριξη</option>
+          </select>
+        </p>
+
+        <p>
+          <label for="msg">Μήνυμα *</label>
+          <textarea id="msg" name="message" rows="5" placeholder="Γράψτε μας..." required></textarea>
+        </p>
+
+        <p class="agree">
+          <label><input type="checkbox" name="agree" required> Αποδέχομαι τους όρους *</label>
+        </p>
+
+        <div class="actions">
+          <button type="submit">Αποστολή</button>
+          <button type="reset">Καθαρισμός</button>
+        </div>
+      </form>
+
+      <p id="form-status" class="form-status" aria-live="polite"></p>
+    </section>
+
+    <!-- Back to top button (fixed) -->
+    <a href="#" class="back-to-top" aria-label="Επιστροφή στην αρχή">⬆ Αρχή</a>
+  </main>
+
+  <footer class="site-footer">
+    <small>&copy; 2026 UrbanCycle — Responsive Web Demo για το μάθημα.</small>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
